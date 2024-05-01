@@ -11,6 +11,12 @@
 		D5936A5D2BE1BBDE00D28A6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5936A5C2BE1BBDE00D28A6F /* ContentView.swift */; };
 		D5936A5F2BE1BBE700D28A6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5936A5E2BE1BBE700D28A6F /* Assets.xcassets */; };
 		D5936A622BE1BBE700D28A6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5936A612BE1BBE700D28A6F /* Preview Assets.xcassets */; };
+		D5936A6A2BE1CDA200D28A6F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5936A692BE1CDA200D28A6F /* HomeView.swift */; };
+		D5936A6E2BE1CDEB00D28A6F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5936A6D2BE1CDEB00D28A6F /* ProfileView.swift */; };
+		D5936A712BE1CFB900D28A6F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5936A702BE1CFB900D28A6F /* LoginView.swift */; };
+		D5936A742BE1D24D00D28A6F /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5936A732BE1D24D00D28A6F /* FontUtils.swift */; };
+		D5936A7E2BE1FD0D00D28A6F /* NewWalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5936A7D2BE1FD0D00D28A6F /* NewWalletView.swift */; };
+		D5936A812BE1FD7A00D28A6F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5936A802BE1FD7A00D28A6F /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		D5936A5C2BE1BBDE00D28A6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D5936A5E2BE1BBE700D28A6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5936A612BE1BBE700D28A6F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D5936A692BE1CDA200D28A6F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D5936A6D2BE1CDEB00D28A6F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D5936A702BE1CFB900D28A6F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D5936A732BE1D24D00D28A6F /* FontUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontUtils.swift; sourceTree = "<group>"; };
+		D5936A7D2BE1FD0D00D28A6F /* NewWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWalletView.swift; sourceTree = "<group>"; };
+		D5936A802BE1FD7A00D28A6F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,10 @@
 		D5936A592BE1BBDE00D28A6F /* CryptoWallet */ = {
 			isa = PBXGroup;
 			children = (
+				D5936A852BE1FE1100D28A6F /* Models */,
+				D5936A822BE1FDC500D28A6F /* managers */,
+				D5936A722BE1D22C00D28A6F /* Utils */,
+				D5936A682BE1CD1800D28A6F /* Views */,
 				D5936A5A2BE1BBDE00D28A6F /* CryptoWalletApp.swift */,
 				D5936A5C2BE1BBDE00D28A6F /* ContentView.swift */,
 				D5936A5E2BE1BBE700D28A6F /* Assets.xcassets */,
@@ -65,6 +81,80 @@
 				D5936A612BE1BBE700D28A6F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D5936A682BE1CD1800D28A6F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5936A7F2BE1FD4200D28A6F /* LoadingView */,
+				D5936A7C2BE1FCF500D28A6F /* NewWalletView */,
+				D5936A6F2BE1CF9E00D28A6F /* LoginView */,
+				D5936A6C2BE1CDD200D28A6F /* ProfileView */,
+				D5936A6B2BE1CDC000D28A6F /* HomeView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D5936A6B2BE1CDC000D28A6F /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				D5936A692BE1CDA200D28A6F /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		D5936A6C2BE1CDD200D28A6F /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				D5936A6D2BE1CDEB00D28A6F /* ProfileView.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		D5936A6F2BE1CF9E00D28A6F /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				D5936A702BE1CFB900D28A6F /* LoginView.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		D5936A722BE1D22C00D28A6F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D5936A732BE1D24D00D28A6F /* FontUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D5936A7C2BE1FCF500D28A6F /* NewWalletView */ = {
+			isa = PBXGroup;
+			children = (
+				D5936A7D2BE1FD0D00D28A6F /* NewWalletView.swift */,
+			);
+			path = NewWalletView;
+			sourceTree = "<group>";
+		};
+		D5936A7F2BE1FD4200D28A6F /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				D5936A802BE1FD7A00D28A6F /* LoadingView.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		D5936A822BE1FDC500D28A6F /* managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = managers;
+			sourceTree = "<group>";
+		};
+		D5936A852BE1FE1100D28A6F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5936A6E2BE1CDEB00D28A6F /* ProfileView.swift in Sources */,
+				D5936A6A2BE1CDA200D28A6F /* HomeView.swift in Sources */,
 				D5936A5D2BE1BBDE00D28A6F /* ContentView.swift in Sources */,
+				D5936A712BE1CFB900D28A6F /* LoginView.swift in Sources */,
+				D5936A7E2BE1FD0D00D28A6F /* NewWalletView.swift in Sources */,
+				D5936A812BE1FD7A00D28A6F /* LoadingView.swift in Sources */,
+				D5936A742BE1D24D00D28A6F /* FontUtils.swift in Sources */,
 				D5936A5B2BE1BBDE00D28A6F /* CryptoWalletApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
