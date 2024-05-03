@@ -10,6 +10,7 @@ import SwiftUI
 struct NewWalletView: View {
     var body: some View {
         Text("New Wallet View")
+        
     }
 }
 
