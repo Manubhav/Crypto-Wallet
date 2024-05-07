@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30BDB4802BE9E66000BE7FC2 /* MitchAPIIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BDB47F2BE9E66000BE7FC2 /* MitchAPIIntegration.swift */; };
 		5B8F9DC52BE5204000473176 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F9DC42BE5204000473176 /* HomeViewModel.swift */; };
 		D5936A5B2BE1BBDE00D28A6F /* CryptoWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5936A5A2BE1BBDE00D28A6F /* CryptoWalletApp.swift */; };
 		D5936A5D2BE1BBDE00D28A6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5936A5C2BE1BBDE00D28A6F /* ContentView.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30BDB47F2BE9E66000BE7FC2 /* MitchAPIIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MitchAPIIntegration.swift; sourceTree = "<group>"; };
 		5B8F9DC42BE5204000473176 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D5936A572BE1BBDE00D28A6F /* CryptoWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5936A5A2BE1BBDE00D28A6F /* CryptoWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoWalletApp.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				D5936A5C2BE1BBDE00D28A6F /* ContentView.swift */,
 				D5936A5E2BE1BBE700D28A6F /* Assets.xcassets */,
 				D5936A602BE1BBE700D28A6F /* Preview Content */,
+				30BDB47F2BE9E66000BE7FC2 /* MitchAPIIntegration.swift */,
 			);
 			path = CryptoWallet;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				D5936A812BE1FD7A00D28A6F /* LoadingView.swift in Sources */,
 				D5936A742BE1D24D00D28A6F /* FontUtils.swift in Sources */,
 				D5936A5B2BE1BBDE00D28A6F /* CryptoWalletApp.swift in Sources */,
+				30BDB4802BE9E66000BE7FC2 /* MitchAPIIntegration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
