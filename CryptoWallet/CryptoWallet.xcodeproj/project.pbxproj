@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B8F9DC52BE5204000473176 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F9DC42BE5204000473176 /* HomeViewModel.swift */; };
 		D5936A5B2BE1BBDE00D28A6F /* CryptoWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5936A5A2BE1BBDE00D28A6F /* CryptoWalletApp.swift */; };
 		D5936A5D2BE1BBDE00D28A6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5936A5C2BE1BBDE00D28A6F /* ContentView.swift */; };
 		D5936A5F2BE1BBE700D28A6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5936A5E2BE1BBE700D28A6F /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B8F9DC42BE5204000473176 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D5936A572BE1BBDE00D28A6F /* CryptoWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5936A5A2BE1BBDE00D28A6F /* CryptoWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoWalletApp.swift; sourceTree = "<group>"; };
 		D5936A5C2BE1BBDE00D28A6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				D5936A692BE1CDA200D28A6F /* HomeView.swift */,
+				5B8F9DC42BE5204000473176 /* HomeViewModel.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5936A6E2BE1CDEB00D28A6F /* ProfileView.swift in Sources */,
+				5B8F9DC52BE5204000473176 /* HomeViewModel.swift in Sources */,
 				D5936A6A2BE1CDA200D28A6F /* HomeView.swift in Sources */,
 				D5936A5D2BE1BBDE00D28A6F /* ContentView.swift in Sources */,
 				D5936A712BE1CFB900D28A6F /* LoginView.swift in Sources */,
