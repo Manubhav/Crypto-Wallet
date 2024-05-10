@@ -80,7 +80,7 @@ struct WelcomeView: View {
                                          .cornerRadius(30)
                                          .padding(.top, 10)
                                          .navigationDestination(isPresented: $isHasWallet) {
-                                             LoginView()
+                                             HomeView()
                                          }
                     }
                     .frame(maxWidth: .infinity, maxHeight: 300)
@@ -100,6 +100,8 @@ struct WelcomeView: View {
     }
 }
 
-#Preview {
-    WelcomeView()
+struct WelcomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        WelcomeView()
+    }
 }
