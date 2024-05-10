@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30BDB4802BE9E66000BE7FC2 /* MitchAPIIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BDB47F2BE9E66000BE7FC2 /* MitchAPIIntegration.swift */; };
+		30D115022BEDED43009BA1CF /* APITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D115012BEDED43009BA1CF /* APITest.swift */; };
 		5B8F9DC52BE5204000473176 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F9DC42BE5204000473176 /* HomeViewModel.swift */; };
 		D5936A5B2BE1BBDE00D28A6F /* CryptoWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5936A5A2BE1BBDE00D28A6F /* CryptoWalletApp.swift */; };
 		D5936A5D2BE1BBDE00D28A6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5936A5C2BE1BBDE00D28A6F /* ContentView.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		30BDB47F2BE9E66000BE7FC2 /* MitchAPIIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MitchAPIIntegration.swift; sourceTree = "<group>"; };
+		30D115012BEDED43009BA1CF /* APITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITest.swift; sourceTree = "<group>"; };
 		5B8F9DC42BE5204000473176 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D5936A572BE1BBDE00D28A6F /* CryptoWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5936A5A2BE1BBDE00D28A6F /* CryptoWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoWalletApp.swift; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30D115002BEDED20009BA1CF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				30D115012BEDED43009BA1CF /* APITest.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		D5936A4E2BE1BBDD00D28A6F = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 		D5936A592BE1BBDE00D28A6F /* CryptoWallet */ = {
 			isa = PBXGroup;
 			children = (
+				30D115002BEDED20009BA1CF /* API */,
 				D5936A882BECD29F00D28A6F /* Components */,
 				D5936A852BE1FE1100D28A6F /* Models */,
 				D5936A822BE1FDC500D28A6F /* managers */,
@@ -307,6 +318,7 @@
 				D5936AA52BED0C8A00D28A6F /* BottomNavigationView.swift in Sources */,
 				D5936A712BE1CFB900D28A6F /* WelcomeView.swift in Sources */,
 				D5936A9E2BECF9F700D28A6F /* SettingsRowView.swift in Sources */,
+				30D115022BEDED43009BA1CF /* APITest.swift in Sources */,
 				D5936A7E2BE1FD0D00D28A6F /* NewWalletView.swift in Sources */,
 				D5936A812BE1FD7A00D28A6F /* LoadingView.swift in Sources */,
 				D5936A8A2BECD2BA00D28A6F /* InputView.swift in Sources */,
