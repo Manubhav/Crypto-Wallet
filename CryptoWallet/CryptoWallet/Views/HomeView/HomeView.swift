@@ -10,20 +10,12 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
     @EnvironmentObject var model: AuthViewModel
+    @ObservedObject var coinModel = GetCryptoCurrencies()
     @State private var fundsToAdd: String
+    @State private var isLoading = false
     
-    
-    var coins: [Coin] = [
-        Coin(coinName: "Bitcoin", coinTicker: "BTC", coinImage: "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/1024/Bitcoin-BTC-icon.png", coinPrice: "17,000", coinGoingUp: true, coinMove: "2.5", coinColors: [Color("#FEA82E"), Color("#F49219")], mcap: "893.12"),
-            
-            Coin(coinName: "Ethreum", coinTicker: "ETH", coinImage: "https://png.pngtree.com/png-vector/20210427/ourmid/pngtree-ethereum-cryptocurrency-coin-icon-png-image_3246438.jpg", coinPrice: "1,100", coinGoingUp: false, coinMove: "1.5", coinColors: [Color("#383838"), Color("#161717")], mcap: "393.12"),
-            
-            Coin(coinName: "Polygon", coinTicker: "MATIC", coinImage: "https://cloudfront-us-east-1.images.arcpublishing.com/coindesk/DPYBKVZG55EWFHIK2TVT3HTH7Y.png", coinPrice: "0,8", coinGoingUp: false, coinMove: "0.5", coinColors: [Color("#7E43DA"), Color("#6A32CF")], mcap: "33.12"),
-            
-            
-            Coin(coinName: "Solana", coinTicker: "SOL", coinImage: "https://upload.wikimedia.org/wikipedia/en/b/b9/Solana_logo.png", coinPrice: "18", coinGoingUp: true, coinMove: "5", coinColors: [Color("#1DEA97"), Color("#9241F2")], mcap: "3.12")
-            
-        ]
+    let colors: [Color] = [Color(.orange), Color(.yellow)]
+
     
     init(fundsToAdd: String = "") {
             _fundsToAdd = State(initialValue: fundsToAdd)
@@ -37,6 +29,7 @@ struct HomeView: View {
                         VStack {
                             Text("Current balance")
                                 .fontWeight(.light)
+                                .padding(.top, 20)
                             Text("$\(user.funds, specifier: "%.2f")")
                                 .padding(.bottom, 10)
                                 .font(.title)
@@ -49,9 +42,10 @@ struct HomeView: View {
                                     .font(.title2)
                                     .fontWeight(.regular)
                                     .foregroundColor(.greenDark)
+                                    .padding(.bottom, 12)
                             }
                         }
-                        .frame(maxWidth: .infinity, maxHeight: 200)
+                        .frame(maxWidth: .infinity, maxHeight: 300)
                         .background(LinearGradient(gradient: Gradient(colors: [Color.lilacLight, Color.blueLight]), startPoint: .topLeading, endPoint: .bottomTrailing))
                         .cornerRadius(10)
                         .padding(.bottom, 15)
@@ -135,14 +129,59 @@ struct HomeView: View {
                         }
                     }
                     .padding()
-                    ScrollView (.vertical, showsIndicators: false) {
-                        VStack (alignment: .leading) {
-                            ForEach(coins) { coin in
-                                ListItemView(coin: coin)
+                    HStack {
+                        Text("Your Stock")
+                            .font(.custom(FontUtils.MAIN_BOLD, size: 24))
+                            .foregroundColor(.black)
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 15, height: 15)
+                            .foregroundColor(.gray)
+                    }
+                    .padding(.top, 10)
+                    .padding(.horizontal, 30)
+                    if isLoading {
+                        LoadingView()
+                    } else {
+                        ScrollView (.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(Array(coinModel.cryptoCurrencies.prefix(6)), id: \.id) { currency in
+                                    StockItemCard(coinName: currency.name, coinTicker: currency.symbol, coinImage: currency.image.absoluteString, coinPrice: String(currency.current_price), coinGoingUp: coinModel.isNonNegative(currency.price_change_percentage_24h), coinMove: String(currency.price_change_percentage_24h), coinColors: colors)
+                                }
+                                .padding(.vertical, 5)
+                                .padding(.horizontal, 10)
+                                   
                             }
                         }
+                        .padding(.horizontal, 15)
                     }
-                    .padding(.top, 24)
+
+                    
+                    Text("Top 4 Crypto Currencies")
+                        .font(.custom(FontUtils.MAIN_BOLD, size: 24))
+                        .foregroundColor(.black)
+                        .multilineTextAlignment(.leading)
+                        .padding(.top, 12)
+                    if isLoading {
+                        LoadingView()
+                    } else {
+                        ScrollView (.vertical, showsIndicators: false) {
+                            VStack (alignment: .leading) {
+                                ForEach(Array(coinModel.cryptoCurrencies.prefix(4)), id: \.id) { coin in
+                                    ListItemView(coin: coin)
+                                }
+                            }
+                        }
+                        .padding(.top, 12)
+                    }
+
+                }
+                .task {
+                    isLoading = true
+                    await coinModel.fetchCryptoCurrencies()
+                    isLoading = false
                 }
             }
             .navigationBarHidden(true)

@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ListItemView: View {
-    
-    var coin: Coin
+    @ObservedObject var viewModel = GetCryptoCurrencies()
+    var coin: CryptoCurrency
     
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: coin.coinImage)) { image in image.resizable()
+            AsyncImage(url: coin.image) { image in image.resizable()
                 
             } placeholder: { Color.gray }
                 .frame(width: 45, height: 45)
@@ -21,22 +21,22 @@ struct ListItemView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 40))
             
             VStack (alignment: .leading) {
-                Text(coin.coinName)
+                Text(coin.name)
                     .font(.custom(FontUtils.MAIN_BOLD, size: 16))
                     .foregroundColor(.black)
                     .padding(.bottom, 5)
                 
                 HStack (alignment: .center) {
-                    Image(systemName: coin.coinGoingUp ? "chevron.up" : "chevron.down")
+                    Image(systemName: viewModel.isNonNegative(coin.price_change_percentage_24h) ? "chevron.up" : "chevron.down")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 12)
-                        .foregroundColor(coin.coinGoingUp ? .green : .red)
+                        .foregroundColor(viewModel.isNonNegative(coin.price_change_percentage_24h) ? .green : .red)
                         .font(Font.title.weight(.bold))
                     
-                    Text("\(coin.coinMove)%")
+                    Text("\(String(format: "%.3f", coin.price_change_percentage_24h))%")
                         .font(.custom(FontUtils.MAIN_REGULAR, size: 14))
-                        .foregroundColor(coin.coinGoingUp ? .green : .red)
+                        .foregroundColor(viewModel.isNonNegative(coin.price_change_percentage_24h) ? .green : .red)
                     
                 }
                 
@@ -46,12 +46,12 @@ struct ListItemView: View {
             Spacer()
             
             VStack (alignment: .trailing) {
-                Text("$\(coin.coinPrice)")
+                Text("$\(String(format: "%.3f", coin.current_price))")
                     .font(.custom(FontUtils.MAIN_BOLD, size: 16))
                     .foregroundColor(.black)
                     .padding(.bottom, 5)
                 
-                Text("MCap $\(coin.mcap) Bn")
+                Text("MCap $\(String(format: "%.1f", coin.market_cap))")
                     .font(.custom(FontUtils.MAIN_REGULAR, size: 13))
                     .foregroundColor(.black)
             }
@@ -63,5 +63,5 @@ struct ListItemView: View {
 }
 
 #Preview {
-    ListItemView(coin: Coin(coinName: "Bitcoin", coinTicker: "BTC", coinImage: "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/1024/Bitcoin-BTC-icon.png", coinPrice: "17,000", coinGoingUp: true, coinMove: "2.5", coinColors: [Color("#FEA82E"), Color("#F49219")], mcap: "893.12"))
+    ListItemView(coin: CryptoCurrency(id: "bitcoin", symbol: "BTC", name: "Bitcoin", image: URL(string: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1696501400")!, current_price: 17000.0, market_cap: 893.12, price_change_percentage_24h: 0.0))
 }
