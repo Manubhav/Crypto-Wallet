@@ -20,13 +20,15 @@ struct MainView: View {
                         switch selectedIndex {
                         case 0:
                         HomeView()
+                                .frame(height: UIScreen.main.bounds.height)
                             .padding(.top, 50)
                         case 1:
-                            LoadingView()
+                            CryptoListView()
                                 .padding(.top, 50)
                         case 2:
                             ProfileView()
                                 .frame( height: UIScreen.main.bounds.height)
+                                .padding(.top, 50)
                         default:
                             ProfileView()
                                 .padding(.top, 50)

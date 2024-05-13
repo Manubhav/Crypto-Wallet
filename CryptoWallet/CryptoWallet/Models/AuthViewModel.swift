@@ -40,12 +40,22 @@ class AuthViewModel: ObservableObject {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             self.userSession = result.user
-            let user = User(id: result.user.uid, fullname: fullname, email: email)
+            let user = User(id: result.user.uid, fullname: fullname, email: email, funds: 10000.0)
             let encodedUser = try Firestore.Encoder().encode(user)
             try await Firestore.firestore().collection("users").document(user.id).setData(encodedUser)
             await fetchUser()
         } catch {
             print("Failed to create user")
+        }
+    }
+    
+    func updateFunds(forUserID userID: String, newFundsAmount: Double) async throws {
+        do {
+            let userRef = Firestore.firestore().collection("users").document(userID)
+            try await userRef.updateData(["funds": newFundsAmount])
+            await fetchUser()
+        } catch {
+            print("Failed to update funds")
         }
     }
     
