@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct CryptoDetailsView: View {
+    
+    @ObservedObject var viewModel = GetCryptoCurrencyDetails()
+    @State private var isLoading = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("hello1")
+        
+        if let unrappedDetails = viewModel.cryptoCurrencyDetails{
+            Text("hello2")
+            
+            Text(unrappedDetails.name)
+            
+        }
+        
+        
     }
 }
 

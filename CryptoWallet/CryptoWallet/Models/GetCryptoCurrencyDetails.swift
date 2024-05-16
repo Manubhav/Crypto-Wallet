@@ -12,10 +12,16 @@ struct CryptoCurrencyDetails: Codable, Identifiable {
     let id: String
     let symbol: String
     let name: String
-    let image: URL
-    let current_price: Double
-    let market_cap: Double
-    let price_change_percentage_24h: Double
+    let image: ImageURLs
+//    let current_price: Double
+//    let market_cap: Double
+//    let price_change_percentage_24h: Double
+    
+    struct ImageURLs: Codable {
+        let thumb: URL
+        let small: URL
+        let large: URL
+    }
 }
 
 
@@ -25,12 +31,12 @@ class GetCryptoCurrencyDetails: ObservableObject {
     
     func fetchCryptoCurrencies() async {
        
-        let url = URL(string: "https://api.coingecko.com/api/v3/coins/id")!
+        let url = URL(string: "https://api.coingecko.com/api/v3/coins/bitcoin")!
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
-        let queryItems: [URLQueryItem] = [
-          URLQueryItem(name: "vs_currency", value: "usd"),
-        ]
-        components.queryItems = components.queryItems.map { $0 + queryItems } ?? queryItems
+//        let queryItems: [URLQueryItem] = [
+//          URLQueryItem(name: "vs_currency", value: "usd"),
+//        ]
+//        components.queryItems = components.queryItems.map { $0 + queryItems } ?? queryItems
 
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
