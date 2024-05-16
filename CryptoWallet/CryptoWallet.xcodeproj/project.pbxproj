@@ -11,6 +11,8 @@
 		300D3E242BF242AC005747F1 /* StockItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300D3E222BF242AC005747F1 /* StockItemCard.swift */; };
 		300D3E262BF242E9005747F1 /* GetCryptoCurrencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300D3E252BF242E9005747F1 /* GetCryptoCurrencies.swift */; };
 		300D3E292BF2431C005747F1 /* CryptoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300D3E272BF2431C005747F1 /* CryptoListView.swift */; };
+		3035B9E42BF633190078D23B /* CryptoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035B9E32BF633190078D23B /* CryptoDetailsView.swift */; };
+		3035B9E62BF638E40078D23B /* GetCryptoCurrencyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3035B9E52BF638E40078D23B /* GetCryptoCurrencyDetails.swift */; };
 		5B8F9DC52BE5204000473176 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F9DC42BE5204000473176 /* HomeViewModel.swift */; };
 		D5936A5B2BE1BBDE00D28A6F /* CryptoWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5936A5A2BE1BBDE00D28A6F /* CryptoWalletApp.swift */; };
 		D5936A5D2BE1BBDE00D28A6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5936A5C2BE1BBDE00D28A6F /* ContentView.swift */; };
@@ -43,6 +45,8 @@
 		300D3E222BF242AC005747F1 /* StockItemCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockItemCard.swift; sourceTree = "<group>"; };
 		300D3E252BF242E9005747F1 /* GetCryptoCurrencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCryptoCurrencies.swift; sourceTree = "<group>"; };
 		300D3E272BF2431C005747F1 /* CryptoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoListView.swift; sourceTree = "<group>"; };
+		3035B9E32BF633190078D23B /* CryptoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailsView.swift; sourceTree = "<group>"; };
+		3035B9E52BF638E40078D23B /* GetCryptoCurrencyDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCryptoCurrencyDetails.swift; sourceTree = "<group>"; };
 		5B8F9DC42BE5204000473176 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D5936A572BE1BBDE00D28A6F /* CryptoWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5936A5A2BE1BBDE00D28A6F /* CryptoWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoWalletApp.swift; sourceTree = "<group>"; };
@@ -90,6 +94,14 @@
 			path = CryptoListView;
 			sourceTree = "<group>";
 		};
+		3035B9E22BF632FD0078D23B /* CryptoDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				3035B9E32BF633190078D23B /* CryptoDetailsView.swift */,
+			);
+			path = CryptoDetailsView;
+			sourceTree = "<group>";
+		};
 		D5936A4E2BE1BBDD00D28A6F = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +146,7 @@
 		D5936A682BE1CD1800D28A6F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3035B9E22BF632FD0078D23B /* CryptoDetailsView */,
 				300D3E282BF2431C005747F1 /* CryptoListView */,
 				D5936A9F2BED092300D28A6F /* MainView */,
 				D5936A8B2BECD83F00D28A6F /* Login */,
@@ -206,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				300D3E252BF242E9005747F1 /* GetCryptoCurrencies.swift */,
+				3035B9E52BF638E40078D23B /* GetCryptoCurrencyDetails.swift */,
 				D5936A992BECDFCF00D28A6F /* AuthViewModel.swift */,
 				D5936A9B2BECE87400D28A6F /* User.swift */,
 				D5936AA82BEEF95A00D28A6F /* Coin.swift */,
@@ -325,9 +339,11 @@
 				D5936AA92BEEF95A00D28A6F /* Coin.swift in Sources */,
 				D5936A9C2BECE87400D28A6F /* User.swift in Sources */,
 				300D3E232BF242AC005747F1 /* SectionButtonView.swift in Sources */,
+				3035B9E62BF638E40078D23B /* GetCryptoCurrencyDetails.swift in Sources */,
 				D5936AA72BEEF90800D28A6F /* ListItemView.swift in Sources */,
 				D5936A6E2BE1CDEB00D28A6F /* ProfileView.swift in Sources */,
 				5B8F9DC52BE5204000473176 /* HomeViewModel.swift in Sources */,
+				3035B9E42BF633190078D23B /* CryptoDetailsView.swift in Sources */,
 				D5936A6A2BE1CDA200D28A6F /* HomeView.swift in Sources */,
 				D5936A5D2BE1BBDE00D28A6F /* ContentView.swift in Sources */,
 				D5936AA52BED0C8A00D28A6F /* BottomNavigationView.swift in Sources */,

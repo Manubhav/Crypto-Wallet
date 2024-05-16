@@ -12,7 +12,7 @@ struct BottomNavigationView: View {
     @Binding var selectedIndex: Int
     let icons = [
         "house",
-        "qrcode.viewfinder",
+        "bitcoinsign",
         "person"
     ]
     
