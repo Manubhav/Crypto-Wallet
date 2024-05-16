@@ -13,7 +13,7 @@ struct MainView: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            Color(.white)
+            Color(.creme)
                 .edgesIgnoringSafeArea(.all)
             ScrollView {
                     ZStack {

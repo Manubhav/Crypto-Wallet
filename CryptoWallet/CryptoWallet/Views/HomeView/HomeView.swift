@@ -178,6 +178,7 @@ struct HomeView: View {
                     }
 
                 }
+                .background(.creme)
                 .task {
                     isLoading = true
                     await coinModel.fetchCryptoCurrencies()

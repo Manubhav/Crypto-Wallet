@@ -12,6 +12,7 @@ struct ProfileView: View {
     
     var body: some View {
         ZStack {
+            
             if let user = viewModel.currentUser {
                 List {
                     Section {
@@ -37,6 +38,7 @@ struct ProfileView: View {
                         }
                     }
                     
+                    
                     Section("General") {
                         HStack {
                             SettingsRowView(imageName: "gear", title: "Something", tintColor: Color(.systemGray))
@@ -57,10 +59,13 @@ struct ProfileView: View {
                         }
                     }
                 }
+                .background(.creme)
+
             }
         }
     }
 }
+
 
 #Preview {
     ProfileView()

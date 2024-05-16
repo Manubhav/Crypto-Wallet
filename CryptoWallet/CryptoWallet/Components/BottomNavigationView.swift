@@ -12,7 +12,7 @@ struct BottomNavigationView: View {
     @Binding var selectedIndex: Int
     let icons = [
         "house",
-        "qrcode.viewfinder",
+        "bitcoinsign",
         "person"
     ]
     
@@ -24,7 +24,7 @@ struct BottomNavigationView: View {
                     ZStack {
                     }
                     .frame(maxWidth: .infinity, maxHeight: 50)
-                    .background(.white)
+                    .background(.creme)
   
                 HStack {
                     ForEach(0..<3, id: \.self) { number in
@@ -39,12 +39,12 @@ struct BottomNavigationView: View {
                                     .foregroundColor(.white)
                                     .frame(width: 40, height: 40)
                                     .padding(2)
-                                    .background(selectedIndex == number ? .black : Color(UIColor.lightGray))
+                                    .background(selectedIndex == number ? .lilacDark : Color(UIColor.black))
                                     .cornerRadius(30)
                             } else {
                                 Image(systemName: icons[number])
                                     .font(.system(size: 25, weight: .regular, design: .rounded))
-                                    .foregroundColor(selectedIndex == number ? .black : Color(UIColor.lightGray))
+                                    .foregroundColor(selectedIndex == number ? .lilacDark : Color(UIColor.black))
                             }
                         })
                         Spacer()
