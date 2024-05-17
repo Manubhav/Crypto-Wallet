@@ -22,7 +22,7 @@ struct ProfileView: View {
                             Text(user.initials)
                                 .font(.title)
                                 .fontWeight(.semibold)
-                                .foregroundColor(.orangee)
+                                .foregroundColor(.orange2)
                                 .frame(width: 72, height: 72)
                                 .background(Color(.black))
                                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)

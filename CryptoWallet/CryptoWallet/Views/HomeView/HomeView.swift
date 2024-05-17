@@ -14,7 +14,7 @@ struct HomeView: View {
     @State private var fundsToAdd: String
     @State private var isLoading = false
     
-    let colors: [Color] = [Color(.orangee), Color(.yelloww)]
+    let colors: [Color] = [Color(.orange2), Color(.yellow2)]
 
     
     init(fundsToAdd: String = "") {
