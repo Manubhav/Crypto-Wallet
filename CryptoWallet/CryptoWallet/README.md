@@ -4,7 +4,7 @@ Welcome to our project CryptoWallet.
 
 It is a mock up of a wallet used to store crypto currency.
 
-Link to our github repository: https://github.com/Manubhav/Crypto-Wallet.git
+Link to our github repository: https://github.com/Manubhav/Crypto-Wallet
 
 Our group is:
 - Manuela Valentina Penuela Hernandez, 24876031

@@ -41,7 +41,7 @@ struct BottomNavigationView: View {
                                     .foregroundColor(.white)
                                     .frame(width: 40, height: 40)
                                     .padding(2)
-                                    .background(selectedIndex == number ? .lilacDark : Color(UIColor.orangee))
+                                    .background(selectedIndex == number ? .lilacDark : Color(UIColor.orange2))
                                     .cornerRadius(30)
                             } else {
                                 Image(systemName: icons[number])
