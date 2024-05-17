@@ -7,9 +7,17 @@ import SwiftUI
 
 struct TestPrint: View {
     var body: some View {
-        Button("Tap me") {
-            print("Button tapped!")
+        
+        VStack{
+            Button("Tap me") {
+                print("Button tapped!")
+            }
+            Spacer()
+            Text("test")
         }
+        .frame(maxWidth:.infinity, alignment: .leading)
+        
+
     }
 }
 

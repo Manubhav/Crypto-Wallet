@@ -28,6 +28,7 @@ struct WelcomeView: View {
                             .frame(width: 400, height: 300)
                             .padding(.top, 50)
                     }
+                    
                     Spacer()
 
                     VStack {
@@ -86,6 +87,11 @@ struct WelcomeView: View {
                     .frame(maxWidth: .infinity, maxHeight: 300)
                     .padding(.all, 20)
                     .background(.white)
+                    
+                    Text("Powered by CoinGecko")
+                        .foregroundColor(.gray)
+                        .font(.custom(FontUtils.MAIN_REGULAR, size: 13))
+                        .multilineTextAlignment(.center)
                     
                 }
                 

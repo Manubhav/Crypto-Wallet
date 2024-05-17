@@ -8,25 +8,9 @@
 import Foundation
 import SwiftUI
 
-struct CryptoCurrencyDetails: Codable, Identifiable{
-    let id: String
-    let symbol: String
-    let name: String
-    let image: ImageURLs
-//    let current_price: Double
-//    let market_cap: Double
-//    let price_change_percentage_24h: Double
-    
-    struct ImageURLs: Codable {
-        let thumb: URL
-        let small: URL
-        let large: URL
-    }
-}
-
 class GetCryptoCurrencyDetails: ObservableObject {
     
-    @Published var cryptoCurrencyDetails: CryptoCurrencyDetails?
+    @Published var cryptoCurrencyDetails: CryptoCurrencyDetailsModel?
     let coinName: String
     
     init(coinName: String){
@@ -52,7 +36,7 @@ class GetCryptoCurrencyDetails: ObservableObject {
         do {
             let (data, _) = try await URLSession.shared.data(for: request)
             let decoder = JSONDecoder()
-            self.cryptoCurrencyDetails = try decoder.decode(CryptoCurrencyDetails.self, from: data)
+            self.cryptoCurrencyDetails = try decoder.decode(CryptoCurrencyDetailsModel.self, from: data)
             print(cryptoCurrencyDetails!)
 
         } catch {
