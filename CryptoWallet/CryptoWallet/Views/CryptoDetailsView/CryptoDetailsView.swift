@@ -93,7 +93,7 @@ struct CryptoDetailsView: View {
                                    .font(.system(size: 16))
                                    .bold()
                                    .padding(.bottom, 2)
-                                   .foregroundColor(.orange)
+                                   .foregroundColor(.orangee)
                                    .padding(.top, 12)
                                Spacer()
                                
@@ -117,7 +117,7 @@ struct CryptoDetailsView: View {
                                    .font(.system(size: 16))
                                    .bold()
                                    .padding(.bottom, 2)
-                                   .foregroundColor(.orange)
+                                   .foregroundColor(.orangee)
                                    .padding(.top, 12)
                                
                                Text("Rank: \(formatNumberToString(number: cryptoDeets.market_data.market_cap_rank, minDecimalPlaces: 0))")
@@ -147,7 +147,7 @@ struct CryptoDetailsView: View {
                        }
                             .frame(maxWidth: .infinity, minHeight: 40)
                             .padding(5)
-                            .background(Color(red: 163/255, green: 86/255, blue: 0))
+                            .background(Color.orangee)
                             .overlay(
                                RoundedRectangle(cornerRadius: 30)
                                     .stroke(Color.black, lineWidth: 2)

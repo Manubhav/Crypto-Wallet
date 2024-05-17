@@ -162,7 +162,6 @@ struct HomeView: View {
                     Text("Top 4 Crypto Currencies")
                         .font(.custom(FontUtils.MAIN_BOLD, size: 24))
                         .foregroundColor(.black)
-                        .multilineTextAlignment(.leading)
                         .padding(.top, 12)
                     if isLoading {
                         LoadingView()
