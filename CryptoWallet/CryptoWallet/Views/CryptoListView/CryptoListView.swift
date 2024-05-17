@@ -43,6 +43,7 @@ struct CryptoListView: View {
                    isLoading = false
                }
         }
+        .background(.black)
 
         .edgesIgnoringSafeArea(.all)
         Spacer()

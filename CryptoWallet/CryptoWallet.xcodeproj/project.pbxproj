@@ -137,10 +137,8 @@
 			children = (
 				D5936A882BECD29F00D28A6F /* Components */,
 				D5936A852BE1FE1100D28A6F /* Models */,
-				D5936A822BE1FDC500D28A6F /* managers */,
 				D5936A722BE1D22C00D28A6F /* Utils */,
 				D5936A682BE1CD1800D28A6F /* Views */,
-				D5936A6D2BE1CDEB00D28A6F /* ProfileView.swift */,
 				D5936A5A2BE1BBDE00D28A6F /* CryptoWalletApp.swift */,
 				D5936A5C2BE1BBDE00D28A6F /* ContentView.swift */,
 				D5936A5E2BE1BBE700D28A6F /* Assets.xcassets */,
@@ -187,6 +185,7 @@
 		D5936A6C2BE1CDD200D28A6F /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
+				D5936A6D2BE1CDEB00D28A6F /* ProfileView.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -221,13 +220,6 @@
 				D5936A802BE1FD7A00D28A6F /* LoadingView.swift */,
 			);
 			path = LoadingView;
-			sourceTree = "<group>";
-		};
-		D5936A822BE1FDC500D28A6F /* managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = managers;
 			sourceTree = "<group>";
 		};
 		D5936A852BE1FE1100D28A6F /* Models */ = {

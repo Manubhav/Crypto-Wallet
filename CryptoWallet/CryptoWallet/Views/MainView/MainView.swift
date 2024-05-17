@@ -30,7 +30,7 @@ struct MainView: View {
                             CryptoListView()
                                 .frame( height: UIScreen.main.bounds.height)
                                 .padding(.top, 50)
-                                .background(Color.creme)
+                                .background(Color.black)
                         }
                         .background(Color.black)
 

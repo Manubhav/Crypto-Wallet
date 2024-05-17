@@ -50,7 +50,7 @@ class GetCryptoCurrencies: ObservableObject {
         let url = URL(string: "https://api.coingecko.com/api/v3/coins/markets")!
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
         let queryItems: [URLQueryItem] = [
-          URLQueryItem(name: "vs_currency", value: "usd"),
+          URLQueryItem(name: "vs_currency", value: "aud"),
         ]
         components.queryItems = components.queryItems.map { $0 + queryItems } ?? queryItems
 
@@ -65,7 +65,7 @@ class GetCryptoCurrencies: ObservableObject {
             let (data, _) = try await URLSession.shared.data(for: request)
             let decoder = JSONDecoder()
             self.cryptoCurrencies = try decoder.decode([CryptoCurrency].self, from: data) 
-            print(cryptoCurrencies)
+//            print(cryptoCurrencies)
         } catch {
             print("Error: \(error.localizedDescription)")
         }
