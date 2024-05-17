@@ -22,9 +22,10 @@ struct BottomNavigationView: View {
                 Divider()
                     .shadow(radius: 10)
                     ZStack {
+                        
                     }
                     .frame(maxWidth: .infinity, maxHeight: 50)
-                    .background(.creme)
+                    .background(.black)
   
                 HStack {
                     ForEach(0..<3, id: \.self) { number in
@@ -39,12 +40,12 @@ struct BottomNavigationView: View {
                                     .foregroundColor(.white)
                                     .frame(width: 40, height: 40)
                                     .padding(2)
-                                    .background(selectedIndex == number ? .lilacDark : Color(UIColor.black))
+                                    .background(selectedIndex == number ? .lilacDark : Color(UIColor.orangee))
                                     .cornerRadius(30)
                             } else {
                                 Image(systemName: icons[number])
                                     .font(.system(size: 25, weight: .regular, design: .rounded))
-                                    .foregroundColor(selectedIndex == number ? .lilacDark : Color(UIColor.black))
+                                    .foregroundColor(selectedIndex == number ? .lilacDark : Color(UIColor.white))
                             }
                         })
                         Spacer()

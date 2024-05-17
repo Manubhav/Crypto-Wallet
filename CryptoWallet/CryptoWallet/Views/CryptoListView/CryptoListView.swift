@@ -21,7 +21,7 @@ struct CryptoListView: View {
                } else {
                    Text("Trending")
                        .font(.custom(FontUtils.MAIN_BOLD, size: 24))
-                       .foregroundColor(.black)
+                       .foregroundColor(.white)
                        .multilineTextAlignment(.leading)
                        .padding(.top, 12)
                    ScrollView (.vertical, showsIndicators: false) {
@@ -39,8 +39,11 @@ struct CryptoListView: View {
                isLoading = false
            }
         }
-
+        .background(Color.black)
+        .edgesIgnoringSafeArea(.all)
+//        .scrollContentBackground(.hidden)
     }
+    
 }
 
 #Preview {

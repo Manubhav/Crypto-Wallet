@@ -13,8 +13,8 @@ struct MainView: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            Color(.creme)
-                .edgesIgnoringSafeArea(.all)
+//            Color(.creme)
+//                .edgesIgnoringSafeArea(.all)
             ScrollView {
                     ZStack {
                         switch selectedIndex {
@@ -22,13 +22,17 @@ struct MainView: View {
                         HomeView()
                                 .frame(height: UIScreen.main.bounds.height)
                             .padding(.top, 50)
+                            .background(Color.creme)
+
                         case 1:
                             CryptoListView()
                                 .padding(.top, 50)
+                                .background(Color.black)
                         case 2:
                             ProfileView()
                                 .frame( height: UIScreen.main.bounds.height)
                                 .padding(.top, 50)
+                                .background(Color.creme)
                         default:
                             ProfileView()
                                 .padding(.top, 50)
