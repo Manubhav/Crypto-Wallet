@@ -120,6 +120,7 @@
 		D5936A4E2BE1BBDD00D28A6F = {
 			isa = PBXGroup;
 			children = (
+				309FC1E82BF7739300827EBC /* README.md */,
 				D5936A592BE1BBDE00D28A6F /* CryptoWallet */,
 				D5936A582BE1BBDE00D28A6F /* Products */,
 			);
@@ -145,7 +146,6 @@
 				D5936A5E2BE1BBE700D28A6F /* Assets.xcassets */,
 				D5936A8E2BECDD1400D28A6F /* GoogleService-Info.plist */,
 				D5936A602BE1BBE700D28A6F /* Preview Content */,
-				309FC1E82BF7739300827EBC /* README.md */,
 			);
 			path = CryptoWallet;
 			sourceTree = "<group>";
