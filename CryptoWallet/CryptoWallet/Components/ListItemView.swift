@@ -131,6 +131,7 @@ struct ListItemView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             })
     }
+    
 }
 
 
