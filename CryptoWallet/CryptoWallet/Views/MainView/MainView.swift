@@ -21,7 +21,7 @@ struct MainView: View {
                     case 0:
                     ScrollView {
                         HomeView()
-                                .frame(height: UIScreen.main.bounds.height)
+                            .frame(height: UIScreen.main.bounds.height)
                             .padding(.top, 50)
                     }
                     case 1:
