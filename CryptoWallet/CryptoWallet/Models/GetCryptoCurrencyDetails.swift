@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct CryptoCurrencyDetails: Codable, Identifiable {
+struct CryptoCurrencyDetails: Codable, Identifiable{
     let id: String
     let symbol: String
     let name: String
@@ -24,14 +24,18 @@ struct CryptoCurrencyDetails: Codable, Identifiable {
     }
 }
 
-
 class GetCryptoCurrencyDetails: ObservableObject {
     
     @Published var cryptoCurrencyDetails: CryptoCurrencyDetails?
+    let coinName: String
     
-    func fetchCryptoCurrencies() async {
+    init(coinName: String){
+        self.coinName = coinName
+    }
+    
+    func fetchCryptoCurrencyDetails() async {
        
-        let url = URL(string: "https://api.coingecko.com/api/v3/coins/bitcoin")!
+        let url = URL(string: "https://api.coingecko.com/api/v3/coins/" + coinName)!
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
 //        let queryItems: [URLQueryItem] = [
 //          URLQueryItem(name: "vs_currency", value: "usd"),
@@ -49,7 +53,8 @@ class GetCryptoCurrencyDetails: ObservableObject {
             let (data, _) = try await URLSession.shared.data(for: request)
             let decoder = JSONDecoder()
             self.cryptoCurrencyDetails = try decoder.decode(CryptoCurrencyDetails.self, from: data)
-            print(cryptoCurrencyDetails ?? "No cryptocurrency details found.")
+            print(cryptoCurrencyDetails!)
+
         } catch {
             print("Error: \(error.localizedDescription)")
         }
