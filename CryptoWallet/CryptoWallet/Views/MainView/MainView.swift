@@ -32,6 +32,8 @@ struct MainView: View {
                                 .padding(.top, 50)
                                 .background(Color.creme)
                         }
+                        .background(Color.black)
+
                     case 2:
                         ScrollView {
                             ProfileView()

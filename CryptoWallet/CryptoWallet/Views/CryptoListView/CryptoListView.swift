@@ -35,15 +35,16 @@ struct CryptoListView: View {
                        .padding(.top, 12)
                    }
                }
+                .background(Color.black)
+
                .task {
                    isLoading = true
                    await viewModel.fetchCryptoCurrencies()
                    isLoading = false
                }
         }
-        .background(Color.black)
+
         .edgesIgnoringSafeArea(.all)
-//        .scrollContentBackground(.hidden)
         Spacer()
     }    
 }
