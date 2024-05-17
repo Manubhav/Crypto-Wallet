@@ -77,19 +77,11 @@ struct CryptoDetailsView: View {
                                    Text("Market Cap Rank: \(formatNumberToString(number: cryptoDeets.market_data.market_cap_rank, minDecimalPlaces: 0))")
                                    Text("Market Cap:   $" + formatNumberToString(number: cryptoDeets.market_data.market_cap.aud))
                                }
-                               
-                               
-                               
                            }
                            .padding()
                            .frame(maxWidth:.infinity, alignment: .leading)
-                           
-                           
-                           
-                           
                            Spacer()
                        }
-                       
                    }
                    else{
                        Text("Error loading")
@@ -99,14 +91,12 @@ struct CryptoDetailsView: View {
                            .padding(.top, 12)
                    }
                }
-           }
+            }.background(.creme)
            .task {
                isLoading = true
                await viewModel.fetchCryptoCurrencyDetails()
                isLoading = false
            }
-        
-
     }
     
     func formatNumberToString(number: Double, minDecimalPlaces: Int = 2) -> String{
