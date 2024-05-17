@@ -86,7 +86,7 @@ struct WelcomeView: View {
                     }
                     .frame(maxWidth: .infinity, maxHeight: 300)
                     .padding(.all, 20)
-                    .background(.white)
+                    .background(.creme)
                     
                     Text("Powered by CoinGecko")
                         .foregroundColor(.gray)

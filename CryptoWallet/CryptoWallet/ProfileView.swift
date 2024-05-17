@@ -11,8 +11,8 @@ struct ProfileView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
+
         ZStack {
-            
             
             if let user = viewModel.currentUser {
                 
