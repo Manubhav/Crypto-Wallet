@@ -14,7 +14,7 @@ struct CryptoListView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView (.vertical, showsIndicators: false) {
+//            ScrollView (.vertical, showsIndicators: false) {
                 VStack {
                    if isLoading {
                        LoadingView()
@@ -24,14 +24,14 @@ struct CryptoListView: View {
                            .font(.custom(FontUtils.MAIN_BOLD, size: 24))
                            .foregroundColor(.black)
                            .multilineTextAlignment(.leading)
-                                                  .padding(.top, 12)
-//                       ScrollView (.vertical, showsIndicators: false) {
+//                           .padding(.top, 12)
+                       ScrollView (.vertical, showsIndicators: false) {
                            VStack (alignment: .leading) {
                                ForEach(Array(viewModel.cryptoCurrencies), id: \.id) { coin in
                                    ListItemView(coin: coin)
                                }
                            }
-//                       }
+                       }
                        .padding(.top, 12)
                    }
                }
@@ -40,8 +40,9 @@ struct CryptoListView: View {
                    await viewModel.fetchCryptoCurrencies()
                    isLoading = false
                }
-            }
+//            }
         }
+        Spacer()
     }
 }
 

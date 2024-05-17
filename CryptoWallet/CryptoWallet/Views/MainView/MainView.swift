@@ -15,26 +15,36 @@ struct MainView: View {
         ZStack(alignment: .bottom) {
             Color(.white)
                 .edgesIgnoringSafeArea(.all)
-            ScrollView {
-                    ZStack {
-                        switch selectedIndex {
-                        case 0:
+
+                ZStack {
+                    switch selectedIndex {
+                    case 0:
+                    ScrollView {
                         HomeView()
                                 .frame(height: UIScreen.main.bounds.height)
                             .padding(.top, 50)
-                        case 1:
+                    }
+                    case 1:
+                        NavigationView {
                             CryptoListView()
+                                .frame( height: UIScreen.main.bounds.height)
                                 .padding(.top, 50)
-                        case 2:
+                        }
+                        
+                    case 2:
+                        ScrollView {
                             ProfileView()
                                 .frame( height: UIScreen.main.bounds.height)
                                 .padding(.top, 50)
-                        default:
+                        }
+                    default:
+                        ScrollView {
                             ProfileView()
                                 .padding(.top, 50)
                         }
                     }
-            }
+                }
+            
             .edgesIgnoringSafeArea(.top)
             BottomNavigationView(selectedIndex: $selectedIndex)
                 .edgesIgnoringSafeArea(.bottom)
