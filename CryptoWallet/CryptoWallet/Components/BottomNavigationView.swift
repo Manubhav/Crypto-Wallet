@@ -17,6 +17,7 @@ struct BottomNavigationView: View {
     ]
     
     var body: some View {
+        
         VStack {
             ZStack {
                 Divider()
