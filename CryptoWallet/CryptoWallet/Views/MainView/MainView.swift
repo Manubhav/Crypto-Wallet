@@ -23,23 +23,28 @@ struct MainView: View {
                         HomeView()
                             .frame(height: UIScreen.main.bounds.height)
                             .padding(.top, 50)
+                            .background(Color.creme)
                     }
                     case 1:
                         NavigationView {
                             CryptoListView()
                                 .frame( height: UIScreen.main.bounds.height)
                                 .padding(.top, 50)
+                                .background(Color.creme)
                         }
                     case 2:
                         ScrollView {
                             ProfileView()
                                 .frame( height: UIScreen.main.bounds.height)
                                 .padding(.top, 50)
+                                .background(Color.creme)
                         }
                     default:
                         ScrollView {
                             ProfileView()
+                                .frame( height: UIScreen.main.bounds.height)
                                 .padding(.top, 50)
+                                .background(Color.creme)
                         }
                     }
                 }
