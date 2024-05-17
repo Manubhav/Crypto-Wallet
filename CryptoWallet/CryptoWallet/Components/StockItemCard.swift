@@ -57,7 +57,7 @@ struct StockItemCard: View {
                                 .font(Font.title.weight(.bold))
                             
                             Text("\(coinMove)%")
-                                .font(.custom(FontUtils.MAIN_REGULAR, size: 14))
+                                .font(.custom(FontUtils.MAIN_REGULAR, size: 12))
                                 .foregroundColor(coinGoingUp ? .green : .red)
                             
                         }

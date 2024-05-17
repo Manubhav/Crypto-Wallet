@@ -21,13 +21,15 @@ struct CryptoListView: View {
                    } else {
                        Text("Trending")
                            .font(.custom(FontUtils.MAIN_BOLD, size: 24))
-                           .foregroundColor(.black)
+                           .foregroundColor(.white)
                            .multilineTextAlignment(.leading)
+                           .padding(.top, 12)
                        ScrollView (.vertical, showsIndicators: false) {
                            VStack (alignment: .leading) {
                                ForEach(Array(viewModel.cryptoCurrencies), id: \.id) { coin in
                                    ListItemView(coin: coin)
                                }
+
                            }
                        }
                        .padding(.top, 12)
@@ -39,8 +41,11 @@ struct CryptoListView: View {
                    isLoading = false
                }
         }
+        .background(Color.black)
+        .edgesIgnoringSafeArea(.all)
+//        .scrollContentBackground(.hidden)
         Spacer()
-    }
+    }    
 }
 
 #Preview {

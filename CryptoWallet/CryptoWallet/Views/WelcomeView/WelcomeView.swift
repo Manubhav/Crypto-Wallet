@@ -22,7 +22,7 @@ struct WelcomeView: View {
                 
                 VStack {
                     ZStack  {
-                        Image("Login")
+                        Image("CW-logo")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 400, height: 300)
@@ -33,9 +33,10 @@ struct WelcomeView: View {
 
                     VStack {
                         HStack {
-                            Text("Buy & Sell")
-                                .font(.custom(FontUtils.MAIN_BOLD, size: 28))
-                            Text("Instantly").font(.custom(FontUtils.MAIN_BOLD, size: 32))
+                            Text("Begin, Buy, Build — Effortlessly.")
+                                .font(.custom(FontUtils.MAIN_BOLD, size: 25))
+                                .tracking(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
+                                .multilineTextAlignment(.center)
                         }
                                        
                         Text("Swap Tokens at real-time prices")
@@ -49,15 +50,14 @@ struct WelcomeView: View {
                         Button { isNewWallet = true } label: {
                                            Text("Create a New Wallet")
                                 .font(.custom(FontUtils.MAIN_REGULAR, size: 18))
-                                                 .foregroundColor(.black)
+                                                 .foregroundColor(.white)
                                                  .padding(10)
                                                  
                                          }
                                          .frame(maxWidth: .infinity, minHeight: 50)
                                          .padding(5)
-                                         .background(Color.yellow)
+                                         .background(Color.lilacDark)
                                          .cornerRadius(30)
-                                         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                                          .navigationDestination(isPresented: $isNewWallet) {
                                              NewWalletView()
                                          }
@@ -93,9 +93,12 @@ struct WelcomeView: View {
                         .font(.custom(FontUtils.MAIN_REGULAR, size: 13))
                         .multilineTextAlignment(.center)
                     
+
                 }
                 
             }
+            .background(.creme)
+
         }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden()

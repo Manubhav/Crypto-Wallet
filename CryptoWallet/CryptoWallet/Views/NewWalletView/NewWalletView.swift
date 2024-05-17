@@ -26,7 +26,7 @@ struct NewWalletView: View {
             .ignoresSafeArea(.all)
         } else {
             VStack {
-                Image("Login")
+                Image("CW-logo")
                     .resizable()
                     .scaledToFill()
                     .frame(width: 250, height: 200)
@@ -83,7 +83,7 @@ struct NewWalletView: View {
                         .foregroundColor(.white)
                         .frame(width: UIScreen.main.bounds.width - 32, height: 48)
                     }
-                .background(Color(.systemBlue))
+                .background(Color(.lilacDark))
                 .disabled(!formIsValid)
                 .opacity(formIsValid ? 1.0 : 0.5 )
                 .cornerRadius(10)
@@ -91,7 +91,8 @@ struct NewWalletView: View {
                 
                 Spacer()
             }
-        }  
+            .background(.creme)
+        }
     }
 }
 

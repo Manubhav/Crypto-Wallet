@@ -77,7 +77,7 @@ struct ListItemView: View {
     var coin: CryptoCurrency
 
     var body: some View {
-
+        
         NavigationLink(
             destination: CryptoDetailsView(coinName: coin.id),
             label: {
@@ -89,12 +89,12 @@ struct ListItemView: View {
                     }
                     .frame(width: 45, height: 45)
                     .scaledToFit()
-                    .clipShape(RoundedRectangle(cornerRadius: 40))
+//                    .clipShape(RoundedRectangle(cornerRadius: 40))
                     
                     VStack(alignment: .leading) {
                         Text(coin.name)
                             .font(.custom(FontUtils.MAIN_BOLD, size: 16))
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
                             .padding(.bottom, 5)
                         
                         HStack(alignment: .center) {
@@ -116,16 +116,19 @@ struct ListItemView: View {
                     VStack(alignment: .trailing) {
                         Text("$\(String(format: "%.3f", coin.current_price))")
                             .font(.custom(FontUtils.MAIN_BOLD, size: 16))
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
                             .padding(.bottom, 5)
                         
                         Text("MCap $\(String(format: "%.1f", coin.market_cap))")
                             .font(.custom(FontUtils.MAIN_REGULAR, size: 13))
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
                     }
                 }
                 .padding(.horizontal, 30)
+                .padding(.vertical, 15)
                 .padding(.bottom, 10)
+                .background(Color.dark)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
             })
     }
 }

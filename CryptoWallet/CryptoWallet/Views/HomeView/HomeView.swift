@@ -14,7 +14,7 @@ struct HomeView: View {
     @State private var fundsToAdd: String
     @State private var isLoading = false
     
-    let colors: [Color] = [Color(.orange), Color(.yellow)]
+    let colors: [Color] = [Color(.orangee), Color(.yelloww)]
 
     
     init(fundsToAdd: String = "") {
@@ -170,7 +170,7 @@ struct HomeView: View {
                         ScrollView (.vertical, showsIndicators: false) {
                             VStack (alignment: .leading) {
                                 ForEach(Array(coinModel.cryptoCurrencies.prefix(4)), id: \.id) { coin in
-                                    ListItemView(coin: coin)
+                                    ListItemView2(coin: coin)
                                 }
                             }
                         }
@@ -178,6 +178,7 @@ struct HomeView: View {
                     }
 
                 }
+                .background(.creme)
                 .task {
                     isLoading = true
                     await coinModel.fetchCryptoCurrencies()
